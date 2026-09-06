@@ -62,8 +62,14 @@ export function DeveloperSection() {
 
                 {/* Pitch */}
                 <p className="text-base sm:text-lg text-gray-300 font-normal leading-relaxed max-w-2xl">
-                  Need a custom website, high-converting portfolio, or web application? <span className="font-bold text-white">Sheraz Web Solution Pro</span> creates ultra-fast, SEO-engineered, and 100% mobile-responsive digital experiences that stand out.
+                  Need a custom website, high-converting portfolio, or web application? <span className="font-bold text-white">Sheraz Web Solution</span> creates ultra-fast, SEO-engineered, and 100% mobile-responsive digital experiences that stand out.
                 </p>
+
+                {/* Slogan Banner */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-white/5 border border-white/10 text-xs font-extrabold text-[#00f2fe]">
+                  <Sparkles className="w-4 h-4 text-[#fe2c55]" />
+                  <span className="tracking-wide">“WE BUILD YOUR DIGITAL FUTURE”</span>
+                </div>
 
                 {/* Key Metrics Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
@@ -91,12 +97,12 @@ export function DeveloperSection() {
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-                    className="absolute w-64 sm:w-72 h-64 sm:h-72 rounded-full border border-dashed border-[#00f2fe]/30 pointer-events-none"
+                    className="absolute w-64 sm:w-72 h-64 sm:h-72 rounded-full border border-dashed border-[#00f2fe]/40 pointer-events-none"
                   />
                   <motion.div
                     animate={{ rotate: -360 }}
                     transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-                    className="absolute w-52 sm:w-60 h-52 sm:h-60 rounded-full border border-dotted border-[#fe2c55]/30 pointer-events-none"
+                    className="absolute w-52 sm:w-60 h-52 sm:h-60 rounded-full border border-dotted border-[#fe2c55]/40 pointer-events-none"
                   />
 
                   {/* 3D Floating Logo Card */}
@@ -112,16 +118,16 @@ export function DeveloperSection() {
                       ease: "easeInOut",
                     }}
                     whileHover={{ scale: 1.08, rotateZ: 2 }}
-                    className="relative w-48 sm:w-56 h-48 sm:h-56 rounded-full p-2 bg-gradient-to-tr from-[#00f2fe] via-[#fe2c55] to-[#ffd600] shadow-[0_20px_50px_rgba(0,242,254,0.35)] cursor-pointer group/logo"
+                    className="relative w-48 sm:w-60 h-48 sm:h-60 rounded-full p-2 bg-gradient-to-tr from-[#00f2fe] via-[#fe2c55] to-[#00f2fe] shadow-[0_20px_50px_rgba(0,242,254,0.35)] cursor-pointer group/logo"
                   >
-                    <div className="relative w-full h-full rounded-full overflow-hidden bg-black p-1">
+                    <div className="relative w-full h-full rounded-full overflow-hidden bg-white p-1">
                       <Image
-                        src="/images/sheraz_web_logo.jpg"
-                        alt="Sheraz Web Solution Pro Official Logo"
+                        src="/images/sheraz_web_logo.png"
+                        alt="Sheraz Web Solution Official Logo - We Build Your Digital Future"
                         fill
                         priority
-                        sizes="(max-width: 640px) 192px, 224px"
-                        className="object-cover rounded-full transition-transform duration-500 group-hover/logo:scale-110"
+                        sizes="(max-width: 640px) 192px, 240px"
+                        className="object-contain p-1 rounded-full transition-transform duration-500 group-hover/logo:scale-105"
                       />
                     </div>
                   </motion.div>
