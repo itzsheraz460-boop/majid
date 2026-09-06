@@ -21,7 +21,7 @@ export const siteConfig = {
     coverImage: "/images/majid.jpg",
     badge: "Verified Comedy Creator",
     tiktokUrl: "https://www.tiktok.com/@majid.funy.video.1",
-    email: "contact@majidfunnyvideo.com",
+    email: "majidrb223@gmail.com",
     location: "Global Content Creator",
   },
   tiktokVideos: [
