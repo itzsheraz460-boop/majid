@@ -91,8 +91,8 @@ export const siteConfig = {
     {
       name: "Facebook",
       platform: "facebook",
-      url: "https://www.facebook.com/majidrb",
-      handle: "Majid Rb",
+      url: "https://www.facebook.com/MajidRB871",
+      handle: "Majid RB 871",
       badge: "Official Page & Reels",
       iconName: "Facebook",
       color: "from-[#1877f2] to-[#0d5ec4]",
