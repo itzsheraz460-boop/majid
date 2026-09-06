@@ -102,11 +102,11 @@ export const siteConfig = {
 
   navLinks: [
     { name: "Home", href: "#home" },
-    { name: "Funny Videos", href: "#videos" },
     { name: "Categories", href: "#categories" },
     { name: "About", href: "#about" },
-    { name: "Gallery", href: "#gallery" },
+    { name: "Team", href: "#team" },
     { name: "Socials", href: "#socials" },
     { name: "Contact", href: "#contact" },
   ],
 };
+

@@ -77,13 +77,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#videos" className="hover:text-[#25f4ee] transition-colors">
-                  Funny Videos
-                </a>
-              </li>
-              <li>
                 <a href="#categories" className="hover:text-[#25f4ee] transition-colors">
-                  Categories
+                  Comedy Categories
                 </a>
               </li>
               <li>
@@ -92,13 +87,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-[#25f4ee] transition-colors">
-                  Moments Gallery
+                <a href="#team" className="hover:text-[#25f4ee] transition-colors">
+                  Meet the Team
                 </a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-[#25f4ee] transition-colors">
-                  Contact
+                  Contact & Inquiries
                 </a>
               </li>
             </ul>

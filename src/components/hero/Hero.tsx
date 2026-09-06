@@ -69,9 +69,9 @@ export function Hero() {
 
           {/* Dual Animated Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-3 w-full sm:w-auto">
-            {/* Watch Funny Videos (Scroll to #videos) */}
+            {/* Watch Funny Videos (Scroll to #team) */}
             <motion.a
-              href="#videos"
+              href="#team"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
               className="w-full sm:w-auto px-7 py-4 rounded-2xl bg-gradient-to-r from-[#fe2c55] to-[#ff0050] text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-3 shadow-lg shadow-[#fe2c55]/30 hover:shadow-xl hover:shadow-[#fe2c55]/50 transition-all border border-white/20"
@@ -79,7 +79,7 @@ export function Hero() {
               <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
                 <Play className="w-4 h-4 fill-white text-white translate-x-0.5" />
               </div>
-              <span>Watch Funny Videos</span>
+              <span>Explore Comedy Team</span>
             </motion.a>
 
             {/* Follow Me on TikTok */}
