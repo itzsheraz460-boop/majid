@@ -75,45 +75,46 @@ export function FeaturedVideo() {
         </div>
 
         {/* 1. Continuous Moving Auto-Scroll Photo Marquee */}
-        <div className="relative mb-10 overflow-hidden rounded-2xl py-3 bg-white/[0.02] border border-white/10 backdrop-blur-sm">
+        <div className="relative mb-10 overflow-hidden rounded-2xl py-3 bg-[#0d101e]/80 border border-white/10 backdrop-blur-sm">
           {/* Gradient shadows on sides for seamless fade */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-[#08090d] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-[#08090d] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-[#08090d] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[#08090d] to-transparent z-10 pointer-events-none" />
 
           {/* Animated Marquee Strip */}
           <motion.div
-            className="flex gap-4 sm:gap-6 w-max cursor-grab active:cursor-grabbing"
+            className="flex gap-3 sm:gap-6 w-max cursor-grab active:cursor-grabbing will-change-transform"
             animate={{ x: ["0%", "-50%"] }}
             transition={{
               repeat: Infinity,
               ease: "linear",
-              duration: 25,
+              duration: 22,
             }}
           >
             {marqueeMembers.map((member, idx) => (
               <motion.div
                 key={`marquee-${member.name}-${member.role}-${idx}`}
-                whileHover={{ scale: 1.08, y: -6 }}
+                whileHover={{ scale: 1.06, y: -4 }}
                 onClick={() => setCurrentIndex(idx % teamMembers.length)}
-                className={`relative flex-shrink-0 w-36 sm:w-44 h-48 sm:h-56 rounded-2xl overflow-hidden cursor-pointer border-2 transition-all duration-300 ${
+                className={`relative flex-shrink-0 w-32 sm:w-44 h-44 sm:h-56 rounded-2xl overflow-hidden cursor-pointer border-2 transition-all duration-300 ${
                   currentIndex === idx % teamMembers.length
                     ? "border-[#25f4ee] shadow-lg shadow-[#25f4ee]/30 scale-105"
-                    : "border-white/15 hover:border-[#fe2c55]"
+                    : "border-white/10 hover:border-[#fe2c55]"
                 }`}
               >
                 <Image
                   src={member.img}
-                  alt={member.name}
+                  alt={`${member.name} - ${member.role}`}
                   fill
-                  sizes="(max-width: 640px) 144px, 176px"
+                  loading="lazy"
+                  sizes="(max-width: 640px) 128px, 176px"
                   className="object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
                 <div className="absolute bottom-2 left-2 right-2 text-center">
-                  <p className="text-sm font-bold text-white leading-tight truncate">
+                  <p className="text-xs sm:text-sm font-bold text-white leading-tight truncate">
                     {member.name}
                   </p>
-                  <p className="text-[11px] font-semibold text-[#25f4ee] truncate">
+                  <p className="text-[10px] sm:text-[11px] font-semibold text-[#25f4ee] truncate">
                     {member.role}
                   </p>
                 </div>
@@ -125,46 +126,37 @@ export function FeaturedVideo() {
         {/* 2. Spotlight Hero Card with Animated Moving Photos */}
         <div className="relative group">
           {/* Animated Neon Glowing Background Border */}
-          <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-r from-[#25f4ee] via-[#fe2c55] to-[#ffd600] opacity-60 group-hover:opacity-100 blur-xl transition duration-700 -z-10 animate-pulse" />
+          <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-r from-[#25f4ee] via-[#fe2c55] to-[#ffd600] opacity-40 group-hover:opacity-80 blur-lg transition duration-700 -z-10" />
 
-          <div className="relative rounded-3xl bg-[#0e101a] border border-white/20 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0">
+          <div className="relative rounded-3xl bg-[#0b0e1a] border border-white/15 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0">
             {/* Animated Photo Stage (Left 7 cols) */}
-            <div className="lg:col-span-7 relative h-80 sm:h-[420px] lg:h-[460px] overflow-hidden bg-[#050608] flex items-center justify-center p-6">
-              {/* Floating Decorative Rings */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-                className="absolute w-96 h-96 rounded-full border border-dashed border-[#25f4ee]/20 pointer-events-none"
-              />
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-                className="absolute w-72 h-72 rounded-full border border-dotted border-[#fe2c55]/20 pointer-events-none"
-              />
+            <div className="lg:col-span-7 relative h-72 sm:h-[400px] lg:h-[440px] overflow-hidden bg-[#060810] flex items-center justify-center p-4 sm:p-6">
+              {/* Floating Decorative Subtle Rings */}
+              <div className="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full border border-dashed border-[#25f4ee]/15 pointer-events-none" />
+              <div className="absolute w-56 sm:w-72 h-56 sm:h-72 rounded-full border border-dotted border-[#fe2c55]/15 pointer-events-none" />
 
               {/* Central Floating Animated Member Card */}
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
-                  initial={{ opacity: 0, scale: 0.85, y: 20 }}
+                  initial={{ opacity: 0, scale: 0.9, y: 15 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.9, y: -20 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="relative w-56 sm:w-64 h-72 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/30"
+                  exit={{ opacity: 0, scale: 0.92, y: -15 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="relative w-48 sm:w-60 h-64 sm:h-80 rounded-2xl overflow-hidden shadow-2xl border-2 border-white/25"
                 >
                   <Image
                     src={currentMember.img}
                     alt={currentMember.name}
                     fill
-                    priority
-                    sizes="(max-width: 640px) 224px, 256px"
+                    sizes="(max-width: 640px) 192px, 240px"
                     className="object-cover object-top"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/25" />
 
                   {/* Role Badge on Photo */}
                   <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-[#fe2c55] text-white flex items-center gap-1 shadow-lg">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] sm:text-[11px] font-black uppercase tracking-wider bg-[#fe2c55] text-white flex items-center gap-1 shadow-lg">
                       <Star className="w-3 h-3 fill-white" />
                       {currentMember.role}
                     </span>
@@ -172,11 +164,11 @@ export function FeaturedVideo() {
 
                   {/* Name on Photo */}
                   <div className="absolute bottom-3 left-3 right-3 text-center">
-                    <h4 className="text-xl font-black text-white drop-shadow">
+                    <h4 className="text-lg sm:text-xl font-black text-white drop-shadow">
                       {currentMember.name}
                     </h4>
                     {currentMember.phone && (
-                      <p className="text-xs text-[#25f4ee] font-semibold mt-0.5">
+                      <p className="text-[11px] sm:text-xs text-[#25f4ee] font-semibold mt-0.5">
                         📞 {currentMember.phone}
                       </p>
                     )}
@@ -188,14 +180,14 @@ export function FeaturedVideo() {
               <button
                 onClick={prevMember}
                 aria-label="Previous member"
-                className="absolute left-3 sm:left-6 p-2.5 sm:p-3 rounded-full bg-black/60 hover:bg-[#fe2c55] text-white border border-white/20 transition-all z-20 backdrop-blur-sm"
+                className="absolute left-2 sm:left-6 p-2 sm:p-3 rounded-full bg-black/60 hover:bg-[#fe2c55] text-white border border-white/20 transition-all z-20 backdrop-blur-sm active:scale-95"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={nextMember}
                 aria-label="Next member"
-                className="absolute right-3 sm:right-6 p-2.5 sm:p-3 rounded-full bg-black/60 hover:bg-[#fe2c55] text-white border border-white/20 transition-all z-20 backdrop-blur-sm"
+                className="absolute right-2 sm:right-6 p-2 sm:p-3 rounded-full bg-black/60 hover:bg-[#fe2c55] text-white border border-white/20 transition-all z-20 backdrop-blur-sm active:scale-95"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -206,6 +198,7 @@ export function FeaturedVideo() {
                   <button
                     key={`dot-${idx}`}
                     onClick={() => setCurrentIndex(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
                     className={`h-1.5 rounded-full transition-all duration-300 ${
                       idx === currentIndex
                         ? "w-6 bg-[#25f4ee]"

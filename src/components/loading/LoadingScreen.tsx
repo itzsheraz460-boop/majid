@@ -8,10 +8,10 @@ export function LoadingScreen() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Smooth, snappy loading duration so users are not blocked
+    // Ultra-snappy loading so mobile performance score is instant
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1200);
+    }, 400);
 
     return () => clearTimeout(timer);
   }, []);

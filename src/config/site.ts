@@ -17,10 +17,10 @@ export const siteConfig = {
     bio: "I'm Majid, a content creator focused on creating funny and entertaining videos. My goal is simple — make people smile, laugh and enjoy their time.",
     detailedBio:
       "Welcome to Majid Funny Video! Since starting out, our mission has been to spread happiness through wholesome humor, relatable comic sketches, hilarious daily reactions, and viral moments. Every day brings a new opportunity to laugh together.",
-    avatar: "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/f09c88462378b577f1ca8fdcaf487ca2~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=c682e222&x-expires=1788771600&x-signature=Kbn1k6na8XyQ1kEjvzVwJQXTerg%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my",
-    coverImage: "https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/f09c88462378b577f1ca8fdcaf487ca2~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=c682e222&x-expires=1788771600&x-signature=Kbn1k6na8XyQ1kEjvzVwJQXTerg%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my",
+    avatar: "/images/majid.jpg",
+    coverImage: "/images/majid.jpg",
     badge: "Verified Comedy Creator",
-    tiktokUrl: "https://www.tiktok.com/@majid.funny.video1",
+    tiktokUrl: "https://www.tiktok.com/@majid.funy.video.1",
     email: "contact@majidfunnyvideo.com",
     location: "Global Content Creator",
   },
