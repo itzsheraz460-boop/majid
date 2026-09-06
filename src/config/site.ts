@@ -81,8 +81,8 @@ export const siteConfig = {
     {
       name: "YouTube",
       platform: "youtube",
-      url: "https://www.youtube.com/@MajidRb",
-      handle: "Majid Rb",
+      url: "https://www.youtube.com/@MajidRb-5",
+      handle: "@MajidRb-5",
       badge: "Shorts & Compilations",
       iconName: "Youtube",
       color: "from-[#ff0000] to-[#cc0000]",
