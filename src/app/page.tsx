@@ -14,6 +14,7 @@ import { TikTokCTA } from "@/components/tiktok/TikTokCTA";
 import { SocialSection } from "@/components/social/SocialSection";
 import { TeamSection } from "@/components/team/TeamSection";
 import { ContactSection } from "@/components/contact/ContactSection";
+import { DeveloperSection } from "@/components/developer/DeveloperSection";
 import { Footer } from "@/components/layout/Footer";
 import { VideoModal } from "@/components/videos/VideoModal";
 import { videosData } from "@/data/videos";
@@ -64,6 +65,9 @@ export default function Home() {
 
         {/* 12. Validated Contact Section */}
         <ContactSection />
+
+        {/* 13. Sheraz Web Solution Developer Showcase */}
+        <DeveloperSection />
       </main>
 
       {/* 13. Professional Footer */}

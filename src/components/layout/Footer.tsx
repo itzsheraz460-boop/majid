@@ -144,8 +144,16 @@ export function Footer() {
         {/* Bottom Bar: Copyright */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <p>© 2026 Majid Funny Video. All rights reserved.</p>
-          <div className="flex items-center gap-1">
-            <span>Crafted for smiles and nonstop entertainment</span>
+          <div className="flex flex-wrap items-center justify-center gap-1.5 text-xs text-gray-400">
+            <span>Designed & Developed by</span>
+            <a
+              href="https://sheraz-web-soloucion-pro.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-[#25f4ee] hover:text-[#fe2c55] underline transition-colors"
+            >
+              Sheraz Web Solution Pro
+            </a>
             <Smile className="w-3.5 h-3.5 text-[#ffd600]" />
           </div>
         </div>
