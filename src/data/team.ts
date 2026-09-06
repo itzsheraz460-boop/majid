@@ -32,7 +32,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Sajid",
     role: "Actor",
-    img: "/images/sajid.png",
+    img: "/images/sajid_actor.jpg",
     phone: "03277371281",
     bio: "",
   },
