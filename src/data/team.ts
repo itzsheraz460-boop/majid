@@ -26,6 +26,7 @@ export const teamMembers: TeamMember[] = [
     name: "Shoaib",
     role: "Actor",
     img: "/images/shoaib.jpg",
+    phone: "03142900496",
     bio: "",
   },
   {
