@@ -8,7 +8,8 @@ export const siteConfig = {
   description:
     "Watch funny videos, comedy clips and entertaining content from Majid Funny Video. Follow @majid.funy.video.1 for more fun and laughter.",
   url: "https://majidfunnyvideo.com",
-  ogImage: "/images/majid.jpg",
+  logo: "/images/majid_logo.png",
+  ogImage: "/images/majid_logo.jpg",
   
   creator: {
     name: "Majid",

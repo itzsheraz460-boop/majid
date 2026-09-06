@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { Smile, Heart, ArrowUp, X, Shield, FileText } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -20,9 +21,15 @@ export function Footer() {
           {/* Brand & Motto */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#fe2c55] to-[#25f4ee] p-[1.5px]">
-                <div className="w-full h-full bg-[#0a0c14] rounded-[10px] flex items-center justify-center font-black text-xs text-white">
-                  MJ
+              <div className="relative w-10 h-10 rounded-full bg-gradient-to-tr from-[#fe2c55] via-[#ffd600] to-[#25f4ee] p-[2px] shadow-md shadow-[#fe2c55]/20">
+                <div className="relative w-full h-full rounded-full overflow-hidden bg-[#0a0c14]">
+                  <Image
+                    src={siteConfig.logo}
+                    alt="Majid Funny Video Logo"
+                    fill
+                    sizes="40px"
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <span className="text-xl font-black text-white tracking-tight">

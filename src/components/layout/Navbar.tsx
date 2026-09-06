@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/config/site";
 import { Menu, X, ExternalLink, Smile } from "lucide-react";
@@ -55,28 +56,33 @@ export function Navbar() {
           className="group flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[#25f4ee] rounded-xl p-1"
           aria-label="Majid Funny Video Home"
         >
-          <div className="relative w-10 h-10 rounded-xl bg-gradient-to-tr from-[#fe2c55] to-[#25f4ee] p-[1.5px] transition-transform duration-300 group-hover:scale-105">
-            <div className="w-full h-full bg-[#0d0f18] rounded-[10px] flex items-center justify-center">
-              <span className="font-black text-sm text-transparent bg-clip-text bg-gradient-to-r from-[#25f4ee] to-[#fe2c55]">
-                MJ
-              </span>
+          <div className="relative w-11 h-11 rounded-full bg-gradient-to-tr from-[#fe2c55] via-[#ffd600] to-[#25f4ee] p-[2px] transition-transform duration-300 group-hover:scale-105 shadow-lg shadow-[#25f4ee]/20">
+            <div className="relative w-full h-full rounded-full overflow-hidden bg-[#0d0f18]">
+              <Image
+                src={siteConfig.logo}
+                alt="Majid Funny Video Official Logo"
+                fill
+                sizes="44px"
+                className="object-cover"
+                priority
+              />
             </div>
             {/* Live comedy dot indicator */}
-            <span className="absolute -top-1 -right-1 flex h-3 w-3">
+            <span className="absolute -top-0.5 -right-0.5 flex h-3.5 w-3.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#fe2c55] opacity-75" />
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#fe2c55]" />
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#fe2c55]" />
             </span>
           </div>
 
           <div className="flex flex-col">
             <div className="flex items-center gap-1.5">
-              <span className="font-extrabold text-lg tracking-tight text-white group-hover:text-[#25f4ee] transition-colors">
+              <span className="font-black text-lg tracking-tight text-white group-hover:text-[#25f4ee] transition-colors">
                 Majid Funny Video
               </span>
               <span className="text-base">😂</span>
             </div>
-            <span className="text-[11px] font-medium text-gray-400 -mt-0.5 tracking-wide">
-              {siteConfig.creator.username}
+            <span className="text-[11px] font-semibold text-[#25f4ee] -mt-0.5 tracking-wide">
+              Official Entertainment Logo
             </span>
           </div>
         </a>

@@ -66,10 +66,10 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: "/images/majid.jpg",
+        url: "/images/majid_logo.jpg",
         width: 1200,
         height: 630,
-        alt: "Majid Funny Video - Viral Comedy & Entertainment",
+        alt: "Majid Funny Video - Official 3D Entertainment Logo",
         type: "image/jpeg",
       },
       {
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     title: "Majid Funny Video | Viral TikTok Comedy & Funny Sketches",
     description:
       "Watch viral comedy sketches and hilarious daily videos by Majid & Team. Follow @majid.funy.video.1!",
-    images: ["/images/majid.jpg"],
+    images: ["/images/majid_logo.jpg"],
     creator: siteConfig.creator.username,
     site: "@majid_funny_video",
   },
@@ -129,8 +129,8 @@ export default function RootLayout({
         "@id": `${siteConfig.url}/#organization`,
         name: siteConfig.name,
         url: siteConfig.url,
-        logo: `${siteConfig.url}/images/majid.jpg`,
-        image: `${siteConfig.url}/images/majid.jpg`,
+        logo: `${siteConfig.url}/images/majid_logo.png`,
+        image: `${siteConfig.url}/images/majid_logo.jpg`,
         description: siteConfig.creator.detailedBio,
         sameAs: siteConfig.socials.map((s) => s.url),
         member: teamMembers.map((member) => ({
