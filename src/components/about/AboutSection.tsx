@@ -114,17 +114,24 @@ export function AboutSection() {
               ))}
             </div>
 
-            {/* Quick Action Button */}
-            <div className="pt-2 flex justify-center lg:justify-start">
+            {/* Quick Action Buttons & Social Links */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
               <a
                 href={siteConfig.creator.tiktokUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#fe2c55] to-[#ff0050] text-white text-xs sm:text-sm font-bold shadow-lg shadow-[#fe2c55]/20 hover:brightness-110 transition-all"
               >
-                <span>Join The Laughs On TikTok</span>
+                <span>Follow @majid.funy.video.1</span>
                 <Heart className="w-4 h-4 fill-white" />
               </a>
+
+              <div className="flex items-center gap-2 text-xs font-bold text-gray-300">
+                <span className="text-gray-400">Also on FB/YT/IG:</span>
+                <span className="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-[#25f4ee]">
+                  Majid Rb
+                </span>
+              </div>
             </div>
           </div>
 
