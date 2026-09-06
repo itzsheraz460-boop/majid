@@ -132,12 +132,7 @@ export default function RootLayout({
         logo: `${siteConfig.url}/images/majid.jpg`,
         image: `${siteConfig.url}/images/majid.jpg`,
         description: siteConfig.creator.detailedBio,
-        sameAs: [
-          siteConfig.creator.tiktokUrl,
-          "https://www.tiktok.com/@majid.funy.video.1",
-          "https://www.instagram.com",
-          "https://www.youtube.com",
-        ],
+        sameAs: siteConfig.socials.map((s) => s.url),
         member: teamMembers.map((member) => ({
           "@type": "Person",
           name: member.name,
